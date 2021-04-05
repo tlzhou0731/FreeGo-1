@@ -7,6 +7,7 @@ package domain;
  */
 public class RoomInfo {
     private int roomId;             //房间id
+    private int hotelId;            //酒店Id
     private String roomName;        //房间名称
     private int peopleLimite;       //人数限制
     private String relateService;   //相关服务
@@ -17,8 +18,9 @@ public class RoomInfo {
     public RoomInfo() {
     }
 
-    public RoomInfo(int roomId, String roomName, int peopleLimite, String relateService, float roomPrice, String roomInform, Boolean flag) {
+    public RoomInfo(int roomId, int hotelId, String roomName, int peopleLimite, String relateService, float roomPrice, String roomInform, Boolean flag) {
         this.roomId = roomId;
+        this.hotelId = hotelId;
         this.roomName = roomName;
         this.peopleLimite = peopleLimite;
         this.relateService = relateService;
@@ -87,6 +89,7 @@ public class RoomInfo {
     public String toString() {
         return "房间信息{" +
                 "房间id=" + roomId +
+                ", 酒店Id=" + hotelId +
                 ", 房间名称='" + roomName + '\'' +
                 ", 人数限制=" + peopleLimite +
                 ", 相关服务='" + relateService + '\'' +

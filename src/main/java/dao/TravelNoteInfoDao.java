@@ -46,7 +46,7 @@ public interface TravelNoteInfoDao {
      * @Description: 系统根据搜索内容search查询游记信息表（TravelNoteList）、游记图片关系表（TravelNotePictureList），
      *               查询成功返回游记信息实例集合List<TravelNoteInfo>,若查询失败，返回 null。
      */
-    List<TravelNoteInfo> queryTravelNoteInfo(String search);
+    List<TravelNoteInfo> queryTravelNoteInfoBySearch(String search);
 
     /**
      * @Author:  李旺旺

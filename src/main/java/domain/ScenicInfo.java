@@ -9,6 +9,13 @@ public class ScenicInfo {
     private int scenicId;                   //景点id
     private String scenicName;              //景点名称
     private String scenicAddress;           //景点地址
+    private String country;                 //国家
+    private String province;                //省
+    private String downtown;                //市
+    private String county;                  //县/区
+    private float lng;                      //经度
+    private float lat;                      //维度
+    private int grade;                      //景点星级
     private String scenicIntro;             //景点介绍
     private String senicDetail;             //景点详细介绍
     private String scenicTele;              //景点电话
@@ -20,12 +27,19 @@ public class ScenicInfo {
 
     public ScenicInfo() {}
 
-    public ScenicInfo(int scenicId, String scenicName, String scenicAddress, String scenicIntro, String senicDetail,
-                      String scenicTele, int scenicSuitbaleMonth, int scenicSuitableTravelDays, int scenicViewNums,
-                      Boolean scenicState, Boolean flag) {
+    public ScenicInfo(int scenicId, String scenicName, String scenicAddress, String country, String province, String downtown,
+                      String county, float lng, float lat, int grade, String scenicIntro, String senicDetail, String scenicTele,
+                      int scenicSuitbaleMonth, int scenicSuitableTravelDays, int scenicViewNums, Boolean scenicState, Boolean flag) {
         this.scenicId = scenicId;
         this.scenicName = scenicName;
         this.scenicAddress = scenicAddress;
+        this.country = country;
+        this.province = province;
+        this.downtown = downtown;
+        this.county = county;
+        this.lng = lng;
+        this.lat = lat;
+        this.grade = grade;
         this.scenicIntro = scenicIntro;
         this.senicDetail = senicDetail;
         this.scenicTele = scenicTele;
@@ -35,6 +49,7 @@ public class ScenicInfo {
         this.scenicState = scenicState;
         this.flag = flag;
     }
+
     public int getScenicId() {
         return scenicId;
     }
@@ -57,6 +72,62 @@ public class ScenicInfo {
 
     public void setScenicAddress(String scenicAddress) {
         this.scenicAddress = scenicAddress;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getProvince() {
+        return province;
+    }
+
+    public void setProvince(String province) {
+        this.province = province;
+    }
+
+    public String getDowntown() {
+        return downtown;
+    }
+
+    public void setDowntown(String downtown) {
+        this.downtown = downtown;
+    }
+
+    public String getCounty() {
+        return county;
+    }
+
+    public void setCounty(String county) {
+        this.county = county;
+    }
+
+    public float getLng() {
+        return lng;
+    }
+
+    public void setLng(float lng) {
+        this.lng = lng;
+    }
+
+    public float getLat() {
+        return lat;
+    }
+
+    public void setLat(float lat) {
+        this.lat = lat;
+    }
+
+    public int getGrade() {
+        return grade;
+    }
+
+    public void setGrade(int grade) {
+        this.grade = grade;
     }
 
     public String getScenicIntro() {
@@ -115,12 +186,27 @@ public class ScenicInfo {
         this.scenicState = scenicState;
     }
 
+    public Boolean getFlag() {
+        return flag;
+    }
+
+    public void setFlag(Boolean flag) {
+        this.flag = flag;
+    }
+
     @Override
     public String toString() {
         return "景点信息{" +
                 "景点id=" + scenicId +
                 ", 景点名称='" + scenicName + '\'' +
                 ", 景点地址='" + scenicAddress + '\'' +
+                ", 国家='" + country + '\'' +
+                ", 省份='" + province + '\'' +
+                ", 城市='" + downtown + '\'' +
+                ", 县/区='" + county + '\'' +
+                ", 经度=" + lng +
+                ", 维度=" + lat +
+                ", 景区星级=" + grade +
                 ", 景点介绍='" + scenicIntro + '\'' +
                 ", 景点详细介绍='" + senicDetail + '\'' +
                 ", 景点电话='" + scenicTele + '\'' +
