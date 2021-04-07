@@ -18,7 +18,7 @@ public interface UserInfoDao {
     * @param:   [userTele, nickName, Password]
     * @Description: 系统将用户手机号userTele、昵称nickname、密码password存到用户信息表（UserList），如果存储失败返回false，如果存储成功，返回true。
     */
-    Boolean saveUserInfo(String userTele, String nickName, String password);
+    Boolean saveUserInfo(UserInfo userInfo);
     
     /**
     * @Author:  李旺旺
@@ -87,7 +87,7 @@ public interface UserInfoDao {
     * @param:   [userInfo]
     * @Description: 系统根据用户id，在用户信息表（UserInfoInterface）中更新相对应的用户信息，若更新成功，返回true，若更新失败，返回false。
     */
-    Boolean changeUserInfo(UserInfo userInfo);
+    Boolean updateUserInfo(UserInfo userInfo);
 
     /**
     * @Author:  李旺旺

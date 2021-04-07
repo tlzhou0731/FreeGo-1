@@ -12,8 +12,7 @@ public class ScenicCommentPictureInfo {
 
     public ScenicCommentPictureInfo() {}
 
-    public ScenicCommentPictureInfo(int scenicCommentId, String picturePath, int pictureOrder) {
-        this.scenicCommentId = scenicCommentId;
+    public ScenicCommentPictureInfo(String picturePath, int pictureOrder) {
         this.picturePath = picturePath;
         this.pictureOrder = pictureOrder;
     }

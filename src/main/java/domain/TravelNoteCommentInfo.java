@@ -14,8 +14,7 @@ public class TravelNoteCommentInfo {
 
     public TravelNoteCommentInfo() {}
 
-    public TravelNoteCommentInfo(int commentId, int userId, int parentId, String commentText, Boolean flag) {
-        this.commentId = commentId;
+    public TravelNoteCommentInfo(int userId, int parentId, String commentText, Boolean flag) {
         this.userId = userId;
         this.parentId = parentId;
         this.commentText = commentText;

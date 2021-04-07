@@ -14,8 +14,7 @@ public class TicketInfo {
 
     public TicketInfo() {}
 
-    public TicketInfo(int ticketId, int scenicId, String ticketName, String ticketType, Boolean ticketState) {
-        this.ticketId = ticketId;
+    public TicketInfo(int scenicId, String ticketName, String ticketType, Boolean ticketState) {
         this.scenicId = scenicId;
         this.ticketName = ticketName;
         this.ticketType = ticketType;

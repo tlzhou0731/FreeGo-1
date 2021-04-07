@@ -12,8 +12,7 @@ public class FacilitiesInfo {
     public FacilitiesInfo() {
     }
 
-    public FacilitiesInfo(int facilitiesId, String facilitiesName) {
-        this.facilitiesId = facilitiesId;
+    public FacilitiesInfo(String facilitiesName) {
         this.facilitiesName = facilitiesName;
     }
 

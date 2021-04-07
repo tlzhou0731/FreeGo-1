@@ -22,10 +22,9 @@ public class TicketOrderInfo {
     private float unsubscribePrice;     //退还金额
     private Boolean flag;               //订单状态(是否删除)
 
-    public TicketOrderInfo(int ticketOrderId, int ticketId, int userId, DateTime ticketDate, float ticketPrice,
+    public TicketOrderInfo(int ticketId, int userId, DateTime ticketDate, float ticketPrice,
                            DateTime ticketOrderTime, int ticketNum, float ticketOrderPrice, String ticketRemark,
                            Boolean ticketOrderState, DateTime unsubscribeTime, float unsubscribePrice, Boolean flag) {
-        this.ticketOrderId = ticketOrderId;
         this.ticketId = ticketId;
         this.userId = userId;
         this.ticketDate = ticketDate;

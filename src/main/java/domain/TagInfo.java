@@ -11,8 +11,7 @@ public class TagInfo {
 
     public TagInfo() {}
 
-    public TagInfo(int tagId, String tagName) {
-        this.tagId = tagId;
+    public TagInfo(String tagName) {
         this.tagName = tagName;
     }
 

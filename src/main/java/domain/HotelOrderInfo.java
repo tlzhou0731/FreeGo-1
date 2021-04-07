@@ -29,11 +29,10 @@ public class HotelOrderInfo {
 
     public HotelOrderInfo() { }
 
-    public HotelOrderInfo(String orderId, int userId, int hotelId, DateTime moveIntoTime, DateTime departureTime,
+    public HotelOrderInfo(int userId, int hotelId, DateTime moveIntoTime, DateTime departureTime,
                           DateTime arrivalTime, String specialRequirement, String contactName, String contactTele,
                           String contactEmail, String invoiceTitle, String invoiceType, String taxpaperNumber,
                           String isNotDepartmentTime, String nowState, DateTime unsubscribeTime, String isFreeUnsubscribe, Boolean flag) {
-        this.orderId = orderId;
         this.userId = userId;
         this.hotelId = hotelId;
         this.moveIntoTime = moveIntoTime;

@@ -15,8 +15,7 @@ public class TicketOrderTravelerInfo {
 
     public TicketOrderTravelerInfo() {}
 
-    public TicketOrderTravelerInfo(int ticketTravelerId, int ticketOrderId, String travelerName, String travelerTele, String travelerIdCard, int travelerOrder) {
-        this.ticketTravelerId = ticketTravelerId;
+    public TicketOrderTravelerInfo(int ticketOrderId, String travelerName, String travelerTele, String travelerIdCard, int travelerOrder) {
         this.ticketOrderId = ticketOrderId;
         this.travelerName = travelerName;
         this.travelerTele = travelerTele;

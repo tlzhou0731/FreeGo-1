@@ -14,13 +14,14 @@ public class UserInfo {
     private String userSex;                 //性别
     private String userIntroduce;           //个人介绍
     private String userHeadPicturePath;     //头像
-    private Boolean flag;                   //是否注销
+    private String status;                  //激活状态(Y激活,N未激活)
+    private String code;                    //激活码（唯一）
+    private Boolean flag;                   //是否注销(1注销,0未注销)
 
     public UserInfo() {
     }
 
-    public UserInfo(int userId, String userTele, String userNickName, String userPassword, String userSex, Boolean flag) {
-        this.userId = userId;
+    public UserInfo(String userTele, String userNickName, String userPassword, String userSex, Boolean flag) {
         this.userTele = userTele;
         this.userNickName = userNickName;
         this.userPassword = userPassword;
@@ -28,9 +29,8 @@ public class UserInfo {
         this.flag = flag;
     }
 
-    public UserInfo(int userId, String userTele, String userEmail, String userNickName, String userPassword, String userSex,
+    public UserInfo(String userTele, String userEmail, String userNickName, String userPassword, String userSex,
                     String userIntroduce, String userHeadPicturePath, Boolean flag) {
-        this.userId = userId;
         this.userTele = userTele;
         this.userEmail = userEmail;
         this.userNickName = userNickName;
@@ -38,6 +38,20 @@ public class UserInfo {
         this.userSex = userSex;
         this.userIntroduce = userIntroduce;
         this.userHeadPicturePath = userHeadPicturePath;
+        this.flag = flag;
+    }
+
+    public UserInfo(String userTele, String userEmail, String userNickName, String userPassword, String userSex,
+                    String userIntroduce, String userHeadPicturePath, String status, String code, Boolean flag) {
+        this.userTele = userTele;
+        this.userEmail = userEmail;
+        this.userNickName = userNickName;
+        this.userPassword = userPassword;
+        this.userSex = userSex;
+        this.userIntroduce = userIntroduce;
+        this.userHeadPicturePath = userHeadPicturePath;
+        this.status = status;
+        this.code = code;
         this.flag = flag;
     }
 
@@ -113,6 +127,22 @@ public class UserInfo {
         this.flag = flag;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
     @Override
     public String toString() {
         return "用户信息{" +
@@ -124,7 +154,9 @@ public class UserInfo {
                 ", 性别='" + userSex + '\'' +
                 ", 个人介绍='" + userIntroduce + '\'' +
                 ", 头像='" + userHeadPicturePath + '\'' +
-                ", 是否注销='" + flag + '\'' +
+                ", 激活状态='" + status + '\'' +
+                ", 激活码='" + code + '\'' +
+                ", 是否注销=" + flag +
                 '}';
     }
 }

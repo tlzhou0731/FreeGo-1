@@ -30,10 +30,9 @@ public class HotelInfo {
 
     public HotelInfo() {}
 
-    public HotelInfo(int hotelId, String hotelName, String hotelAddress, String hotelTele, String country, String province,
+    public HotelInfo(String hotelName, String hotelAddress, String hotelTele, String country, String province,
                      String downtown, String county, float lng, float lat, float overallScore, Year openTime, Year fitmentTime,
                      float brand, int level, int hot, String sketch, Boolean flag) {
-        this.hotelId = hotelId;
         this.hotelName = hotelName;
         this.hotelAddress = hotelAddress;
         this.hotelTele = hotelTele;

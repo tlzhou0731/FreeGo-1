@@ -12,8 +12,7 @@ public class LocateInfo {
 
     public LocateInfo() {}
 
-    public LocateInfo(int locateId, String locateName, String longitudeAndLatitude) {
-        this.locateId = locateId;
+    public LocateInfo(String locateName, String longitudeAndLatitude) {
         this.locateName = locateName;
         LongitudeAndLatitude = longitudeAndLatitude;
     }

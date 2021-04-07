@@ -2,27 +2,26 @@ package domain;
 
 /**
  * @Author: 李旺旺
- * @Date: 2021/4/3 10:42
- * @Description: 酒店评论图片关系
+ * @Date: 2021/4/6 18:36
+ * @Description: 景点图片关系
  */
-public class HotelCommentPictureInfo {
-    private int commentId;          //评论id
+public class ScenicPictureInfo {
+    private int scenicId;           //景点Id
     private String picturePath;     //图片路径
-    private int pictureOrder;       //图片顺序
+    private int pictureOrder;       //景点图片顺序
 
-    public HotelCommentPictureInfo() {}
-
-    public HotelCommentPictureInfo(String picturePath, int pictureOrder) {
+    public ScenicPictureInfo(int scenicId, String picturePath, int pictureOrder) {
+        this.scenicId = scenicId;
         this.picturePath = picturePath;
         this.pictureOrder = pictureOrder;
     }
 
-    public int getCommentId() {
-        return commentId;
+    public int getScenicId() {
+        return scenicId;
     }
 
-    public void setCommentId(int commentId) {
-        this.commentId = commentId;
+    public void setScenicId(int scenicId) {
+        this.scenicId = scenicId;
     }
 
     public String getPicturePath() {
@@ -43,10 +42,10 @@ public class HotelCommentPictureInfo {
 
     @Override
     public String toString() {
-        return "酒店评论图片关系{" +
-                "评论id=" + commentId +
+        return "景点图片关系{" +
+                "景点Id=" + scenicId +
                 ", 图片路径='" + picturePath + '\'' +
-                ", 图片顺序=" + pictureOrder +
+                ", 景点图片顺序=" + pictureOrder +
                 '}';
     }
 }

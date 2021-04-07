@@ -17,8 +17,7 @@ public class ScenicCommentInfo {
     public ScenicCommentInfo() {
     }
 
-    public ScenicCommentInfo(int scenicCommentId, int parentId, int userId, int scenicId, int scenicGrade, String commentText, Boolean scenicCommentState) {
-        this.scenicCommentId = scenicCommentId;
+    public ScenicCommentInfo(int parentId, int userId, int scenicId, int scenicGrade, String commentText, Boolean scenicCommentState) {
         this.parentId = parentId;
         this.userId = userId;
         this.scenicId = scenicId;

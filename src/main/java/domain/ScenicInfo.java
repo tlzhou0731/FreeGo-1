@@ -27,10 +27,9 @@ public class ScenicInfo {
 
     public ScenicInfo() {}
 
-    public ScenicInfo(int scenicId, String scenicName, String scenicAddress, String country, String province, String downtown,
+    public ScenicInfo(String scenicName, String scenicAddress, String country, String province, String downtown,
                       String county, float lng, float lat, int grade, String scenicIntro, String senicDetail, String scenicTele,
                       int scenicSuitbaleMonth, int scenicSuitableTravelDays, int scenicViewNums, Boolean scenicState, Boolean flag) {
-        this.scenicId = scenicId;
         this.scenicName = scenicName;
         this.scenicAddress = scenicAddress;
         this.country = country;

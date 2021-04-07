@@ -18,8 +18,7 @@ public class RoomInfo {
     public RoomInfo() {
     }
 
-    public RoomInfo(int roomId, int hotelId, String roomName, int peopleLimite, String relateService, float roomPrice, String roomInform, Boolean flag) {
-        this.roomId = roomId;
+    public RoomInfo(int hotelId, String roomName, int peopleLimite, String relateService, float roomPrice, String roomInform, Boolean flag) {
         this.hotelId = hotelId;
         this.roomName = roomName;
         this.peopleLimite = peopleLimite;

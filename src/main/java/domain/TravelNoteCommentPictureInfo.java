@@ -12,8 +12,7 @@ public class TravelNoteCommentPictureInfo {
 
     public TravelNoteCommentPictureInfo() {}
 
-    public TravelNoteCommentPictureInfo(int commentId, String picturePath, int pictureOrder) {
-        this.commentId = commentId;
+    public TravelNoteCommentPictureInfo(String picturePath, int pictureOrder) {
         this.picturePath = picturePath;
         this.pictureOrder = pictureOrder;
     }

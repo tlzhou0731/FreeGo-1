@@ -24,9 +24,8 @@ public class HotelCommentInfo {
 
     }
 
-    public HotelCommentInfo(int commentId, int parentId, int userId, int hotelId, String commentWord, int allScore,
+    public HotelCommentInfo(int parentId, int userId, int hotelId, String commentWord, int allScore,
                             int locateScore, int cleanScore, int facilitiesScore, int serviceScore, int comfortScore, int eatScore, Boolean flag) {
-        this.commentId = commentId;
         this.parentId = parentId;
         this.userId = userId;
         this.hotelId = hotelId;

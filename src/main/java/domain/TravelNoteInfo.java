@@ -23,10 +23,8 @@ public class TravelNoteInfo {
 
     public TravelNoteInfo() {}
 
-    public TravelNoteInfo(int travelNoteId, String travelNoteTitle, String travelNoteText, DateTime publishDate,
-                          int pageViews, DateTime travelTime, int travelDays, String travelPerson, int travelPrice,
-                          String travelLocate, Boolean isPublish, Boolean flag) {
-        this.travelNoteId = travelNoteId;
+    public TravelNoteInfo(String travelNoteTitle, String travelNoteText, DateTime publishDate, int pageViews, DateTime travelTime,
+                          int travelDays, String travelPerson, int travelPrice, String travelLocate, Boolean isPublish, Boolean flag) {
         this.travelNoteTitle = travelNoteTitle;
         this.travelNoteText = travelNoteText;
         this.publishDate = publishDate;

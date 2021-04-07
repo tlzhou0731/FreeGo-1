@@ -14,8 +14,7 @@ public class RoomDetailInfo {
 
     public RoomDetailInfo() {}
 
-    public RoomDetailInfo(int roomId, DateTime roomdate, int roomNum) {
-        this.roomId = roomId;
+    public RoomDetailInfo(DateTime roomdate, int roomNum) {
         this.roomdate = roomdate;
         this.roomNum = roomNum;
     }
