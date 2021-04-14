@@ -4,6 +4,11 @@ import domain.*;
 
 import java.util.List;
 
+/**
+ * @Author: 李旺旺
+ * @Date: 2021/4/12 12:28
+ * @Description:
+ */
 public interface HotelInfoDao {
     /**
     * @Author:  李旺旺

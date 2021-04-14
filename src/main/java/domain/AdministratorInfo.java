@@ -17,4 +17,11 @@ public class AdministratorInfo {
         this.password = password;
     }
 
+    @Override
+    public String toString() {
+        return "管理员信息实体类{" +
+                "管理员账号='" + account + '\'' +
+                ", 管理员密码='" + password + '\'' +
+                '}';
+    }
 }

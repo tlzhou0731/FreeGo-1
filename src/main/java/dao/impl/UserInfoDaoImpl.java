@@ -22,10 +22,11 @@ public class UserInfoDaoImpl implements UserInfoDao {
      */
     @Override
     public Boolean isUserCellnumberExist(String userTele) {
+        String sql = null;
         UserInfo user = null;
         try {
             //1.定义sql语句
-            String sql = "select * from user where userTele = ?";
+            sql = "select * from user where userTele = ?";
             //2.执行
             user = template.queryForObject(sql, new BeanPropertyRowMapper<UserInfo>(UserInfo.class), userTele);
         } catch (Exception e){
@@ -136,6 +137,9 @@ public class UserInfoDaoImpl implements UserInfoDao {
         return false;
     }
 
+    /**
+     * 根据游记更新用户偏好
+     */
     @Override
     public Boolean updateUserPreferByTravelNote(int userId, int travelNoteId, float preferWeight) {
         //1.定义sql语句
@@ -143,6 +147,9 @@ public class UserInfoDaoImpl implements UserInfoDao {
         return null;
     }
 
+    /**
+     * 根据酒店更新用户偏好
+     */
     @Override
     public Boolean updateUserPreferByHotel(int userId, int hotelId, float preferWeight) {
         //1.定义sql语句
@@ -150,6 +157,9 @@ public class UserInfoDaoImpl implements UserInfoDao {
         return null;
     }
 
+    /**
+     * 根据景点更新用户偏好
+     */
     @Override
     public Boolean updateUserPreferByScenic(int userId, int scenicId, float preferWeight) {
         //1.定义sql语句
@@ -157,24 +167,52 @@ public class UserInfoDaoImpl implements UserInfoDao {
         return null;
     }
 
+    /**
+     * 用户修改个人信息
+     */
     @Override
     public Boolean updateUserInfo(UserInfo userInfo) {
+        String sql = null;
         //1.定义sql语句
+        sql = "update user set userTele = ?, userEmail = ?, userNickName = ?, userPassword = ?, userSex = ?, " +
+                "userIntroduce = ?, userHeadPicturePath = ? where userId = ?";
         //2.执行
-        return null;
+        int result = template.update(sql,
+                userInfo.getUserTele(),
+                userInfo.getUserEmail(),
+                userInfo.getUserNickName(),
+                userInfo.getUserPassword(),
+                userInfo.getUserSex(),
+                userInfo.getUserIntroduce(),
+                userInfo.getUserHeadPicturePath(),
+                userInfo.getUserId());
+        if (result == 1) {
+            return true;
+        }
+        return false;
     }
 
+    /**
+     * 查询用户关注信息
+     */
     @Override
     public List<UserInfo> queryConcernInfo(int userId) {
+        String sql = null;
         //1.定义sql语句
+        sql = "select * from user where userId in (select userconcern.`followId` from userconcern where userId = ?)";
         //2.执行
-        return null;
+        return  template.query(sql, new BeanPropertyRowMapper<UserInfo>(UserInfo.class), userId);
     }
 
+    /**
+     * 查询用户粉丝信息
+     */
     @Override
     public List<UserInfo> queryFollowInfo(int userId) {
+        String sql = null;
         //1.定义sql语句
+        sql = "select * from user where userId in (select userconcern.`userId` from userconcern where followId = ?)";
         //2.执行
-        return null;
+        return  template.query(sql, new BeanPropertyRowMapper<UserInfo>(UserInfo.class), userId);
     }
 }

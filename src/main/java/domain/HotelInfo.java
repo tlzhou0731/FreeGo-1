@@ -13,6 +13,7 @@ public class HotelInfo {
     private String hotelName;       //酒店名称
     private String hotelAddress;    //酒店地址
     private String hotelTele;       //酒店电话
+    private String hotelPicture;    //酒店图片
     private String country;         //国家
     private String province;        //省
     private String downtown;        //市
@@ -36,6 +37,29 @@ public class HotelInfo {
         this.hotelName = hotelName;
         this.hotelAddress = hotelAddress;
         this.hotelTele = hotelTele;
+        this.country = country;
+        this.province = province;
+        this.downtown = downtown;
+        this.county = county;
+        this.lng = lng;
+        this.lat = lat;
+        this.overallScore = overallScore;
+        this.openTime = openTime;
+        this.fitmentTime = fitmentTime;
+        this.brand = brand;
+        this.level = level;
+        this.hot = hot;
+        this.sketch = sketch;
+        this.flag = flag;
+    }
+
+    public HotelInfo(String hotelName, String hotelAddress, String hotelTele, String hotelPicture, String country,
+                     String province, String downtown, String county, float lng, float lat, float overallScore,
+                     Year openTime, Year fitmentTime, float brand, int level, int hot, String sketch, Boolean flag) {
+        this.hotelName = hotelName;
+        this.hotelAddress = hotelAddress;
+        this.hotelTele = hotelTele;
+        this.hotelPicture = hotelPicture;
         this.country = country;
         this.province = province;
         this.downtown = downtown;
@@ -82,6 +106,14 @@ public class HotelInfo {
 
     public void setHotelTele(String hotelTele) {
         this.hotelTele = hotelTele;
+    }
+
+    public String getHotelPicture() {
+        return hotelPicture;
+    }
+
+    public void setHotelPicture(String hotelPicture) {
+        this.hotelPicture = hotelPicture;
     }
 
     public String getCountry() {
@@ -203,6 +235,7 @@ public class HotelInfo {
                 ", 酒店名称='" + hotelName + '\'' +
                 ", 酒店地址='" + hotelAddress + '\'' +
                 ", 酒店电话='" + hotelTele + '\'' +
+                ", 酒店图片='" + hotelPicture + '\'' +
                 ", 国家='" + country + '\'' +
                 ", 省份='" + province + '\'' +
                 ", 城市='" + downtown + '\'' +

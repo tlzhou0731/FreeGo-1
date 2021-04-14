@@ -3,6 +3,11 @@ package dao;
 import domain.UserInfo;
 import java.util.List;
 
+/**
+ * @Author: 李旺旺
+ * @Date: 2021/4/12 12:28
+ * @Description:
+ */
 public interface UserInfoDao {
     /**
     * @Author:  李旺旺

@@ -4,7 +4,13 @@ import domain.*;
 
 import java.util.List;
 
+/**
+ * @Author: 李旺旺
+ * @Date: 2021/4/12 12:28
+ * @Description:
+ */
 public interface TravelNoteInfoDao {
+
     /**
     * @Author:  李旺旺
     * @Date:    2021/3/31 20:31
@@ -44,7 +50,7 @@ public interface TravelNoteInfoDao {
      * @Date:    2021/3/31 20:34
      * @param:   [search]
      * @Description: 系统根据搜索内容search查询游记信息表（TravelNoteList）、游记图片关系表（TravelNotePictureList），
-     *               查询成功返回游记信息实例集合List<TravelNoteInfo>,若查询失败，返回 null。
+     *               查询成功返回游记信息实例集合List<TravelNoteInfo>,若查询失败，返回 null。`
      */
     List<TravelNoteInfo> queryTravelNoteInfoBySearch(String search);
 
