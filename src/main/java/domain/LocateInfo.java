@@ -9,6 +9,7 @@ public class LocateInfo {
     private int locateId;                   //位置id
     private String locateName;              //位置名称
     private String LongitudeAndLatitude;    //经纬度
+    private String introduce;               //介绍
 
     public LocateInfo() {}
 
