@@ -24,12 +24,13 @@ public class ScenicInfo {
     private int scenicViewNums;             //适合人数
     private Boolean scenicState;            //景点开放状态
     private Boolean flag;                   //景点状态(是否删除)
+    private String scenicCoverPicture;          //景点封面图片
 
     public ScenicInfo() {}
 
     public ScenicInfo(String scenicName, String scenicAddress, String country, String province, String downtown,
                       String county, float lng, float lat, int grade, String scenicIntro, String senicDetail, String scenicTele,
-                      int scenicSuitbaleMonth, int scenicSuitableTravelDays, int scenicViewNums, Boolean scenicState, Boolean flag) {
+                      int scenicSuitbaleMonth, int scenicSuitableTravelDays, int scenicViewNums, Boolean scenicState, Boolean flag,String scenicCoverPicture) {
         this.scenicName = scenicName;
         this.scenicAddress = scenicAddress;
         this.country = country;
@@ -47,6 +48,7 @@ public class ScenicInfo {
         this.scenicViewNums = scenicViewNums;
         this.scenicState = scenicState;
         this.flag = flag;
+        this.scenicCoverPicture = scenicCoverPicture;
     }
 
     public int getScenicId() {
@@ -193,6 +195,14 @@ public class ScenicInfo {
         this.flag = flag;
     }
 
+    public String getScenicCoverPicture(String scenicCoverPicture) {
+        return scenicCoverPicture;
+    }
+
+    public void setScenicCoverPicture(String scenicCoverPicture) {
+        this.scenicCoverPicture = scenicCoverPicture;
+    }
+
     @Override
     public String toString() {
         return "景点信息{" +
@@ -214,6 +224,7 @@ public class ScenicInfo {
                 ", 适合人数=" + scenicViewNums +
                 ", 景点开放状态=" + scenicState +
                 ", 景点状态(是否删除)=" + flag +
+                ", 景点封面图片=" + scenicCoverPicture +
                 '}';
     }
 }

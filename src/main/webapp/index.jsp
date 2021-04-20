@@ -44,117 +44,9 @@
 </head>
 <body>
     <h1>多选框</h1>
-
-
-    <div class="btn-toolbar" role="toolbar" aria-label="...">
-        <div class="btn-group" role="group" aria-label="...">
-            <div class="btn-group" role="group" aria-label="...">
-                <button id="b1" type="button" class="btn btn-default">1</button>
-                <button type="button" class="btn btn-default">2</button>
-                <button type="button" class="btn btn-default">3</button>
-            </div>
-        </div>
-        <div class="btn-group" role="group" aria-label="...">
-            <div class="btn-group" role="group" aria-label="...">
-                <button type="button" class="btn btn-default">4</button>
-                <button type="button" class="btn btn-default">5</button>
-                <button type="button" class="btn btn-default">6</button>
-                <button type="button" class="btn btn-default">7</button>
-            </div>
-        </div>
-
-    </div>
-
-
-    <div>
-        <select class="selectpicker" multiple data-live-search="true">
-            <option value="1">广东省</option>
-            <option value="2">广西省</option>
-            <option value="3">福建省</option>
-            <option value="4">湖南省</option>
-            <option value="5">山东省</option>
-        </select>
-    </div>
-
-    <div>
-        <div>
-            时间
-        </div>
-        <select id="'dateChoose" class="form-control selectpicker"
-                data-width="30%" data-live-search="true"
-                multiple data-max-options="5" onchange="getDates(this)" >
-            <option value="1">1月</option>
-            <option value="2">2月</option>
-            <option value="3">3月</option>
-            <option value="4">4月</option>
-            <option value="5">5月</option>
-            <option value="6">6月</option>
-            <option value="7">7月</option>
-            <option value="8">8月</option>
-            <option value="9">9月</option>
-            <option value="10">10月</option>
-            <option value="11">11月</option>
-            <option value="12">12月</option>
-        </select>
-        <div>
-            地点
-        </div>
-        <select id="'addChoose" class="form-control selectpicker"
-                data-width="30%" data-live-search="true"
-                multiple data-max-options="5" onchange="getAdds(this)" >
-            <optgroup label="广东省">
-                <option value="1">广州市</option>
-                <option value="2">深圳市</option>
-                <option value="3">珠海市</option>
-            </optgroup>
-            <optgroup label="广西">
-                <option value="1">南宁市</option>
-                <option value="2">柳州</option>
-                <option value="3">桂林市</option>
-            </optgroup>
-            <optgroup label="山东">
-                <option value="1">烟台</option>
-                <option value="2">青岛</option>
-                <option value="3">济南</option>
-            </optgroup>
-        </select>
-
-        <div>
-            主题
-        </div>
-        <select id="'themeChoose" class="form-control selectpicker"
-                data-width="30%" data-live-search="true"
-                multiple data-max-options="5"  onchange="getThemes(this)" >
-            <option value="1">草原</option>
-            <option value="2">星空</option>
-            <option value="3">赏花</option>
-            <option value="4">雪景</option>
-            <option value="5">海岛</option>
-            <option value="6">极限运动</option>
-            <option value="7">滑雪</option>
-            <option value="8">温泉</option>
-            <option value="9">避暑</option>
-            <option value="10">自驾</option>
-            <option value="11">游轮</option>
-            <option value="12">父母</option>
-
-        </select>
-    </div>
-
-
-    <div>
-        <form class="navbar-form navbar-left" action="ScenicServlet" method="post">
-            <div class="form-group">
-                <input id="searchText" name="searchText" type="text" class="form-control" placeholder="">
-            </div>
-            <button id="btn-show" type="button" class="btn btn-default" onclick="showChoose()">显示</button>
-            <button id="btn-search" type="submit" class="btn btn-default">搜索</button>
-        </form>
-    </div>
-
-
     <script type="text/javascript">
         var choosesum = [];
+        var ss = "jsSS";
 
         // $(window).on('load', function () {
         //     $('#dateChoose').selectpicker({
@@ -205,11 +97,115 @@
             console.log(choosesum);
         }
 
-
-
-
-
     </script>
+
+    <div class="btn-toolbar" role="toolbar" aria-label="...">
+        <div class="btn-group" role="group" aria-label="...">
+            <div class="btn-group" role="group" aria-label="...">
+                <button id="b1" type="button" class="btn btn-default">1</button>
+                <button type="button" class="btn btn-default">2</button>
+                <button type="button" class="btn btn-default">3</button>
+            </div>
+        </div>
+        <div class="btn-group" role="group" aria-label="...">
+            <div class="btn-group" role="group" aria-label="...">
+                <button type="button" class="btn btn-default">4</button>
+                <button type="button" class="btn btn-default">5</button>
+                <button type="button" class="btn btn-default">6</button>
+                <button type="button" class="btn btn-default">7</button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div>
+        <select class="selectpicker" multiple data-live-search="true">
+            <option value="1">广东省</option>
+            <option value="2">广西省</option>
+            <option value="3">福建省</option>
+            <option value="4">湖南省</option>
+            <option value="5">山东省</option>
+        </select>
+    </div>
+
+    <div>
+        <form class="navbar-form navbar-left" action="ScenicServlet" method="post">
+            <div>
+                <div>
+                    时间
+                </div>
+                <select id="'dateChoose" name="dateChoose" class="form-control selectpicker"
+                        data-width="80%" data-live-search="true"
+                        multiple data-max-options="5" onchange="getDates(this)" >
+                    <option value="1">1月</option>
+                    <option value="2">2月</option>
+                    <option value="3">3月</option>
+                    <option value="4">4月</option>
+                    <option value="5">5月</option>
+                    <option value="6">6月</option>
+                    <option value="7">7月</option>
+                    <option value="8">8月</option>
+                    <option value="9">9月</option>
+                    <option value="10">10月</option>
+                    <option value="11">11月</option>
+                    <option value="12">12月</option>
+                </select>
+                <div>
+                    地点
+                </div>
+                <select id="'addChoose" name="addChoose" class="form-control selectpicker"
+                        data-width="80%" data-live-search="true"
+                        multiple data-max-options="5" onchange="getAdds(this)" >
+                    <optgroup label="广东省">
+                        <option value="1">广州市</option>
+                        <option value="2">深圳市</option>
+                        <option value="3">珠海市</option>
+                    </optgroup>
+                    <optgroup label="广西">
+                        <option value="1">南宁市</option>
+                        <option value="2">柳州</option>
+                        <option value="3">桂林市</option>
+                    </optgroup>
+                    <optgroup label="山东">
+                        <option value="1">烟台</option>
+                        <option value="2">青岛</option>
+                        <option value="3">济南</option>
+                    </optgroup>
+                </select>
+
+                <div>
+                    主题
+                </div>
+                <select id="'themeChoose" name="themeChoose" class="form-control selectpicker"
+                        data-width="80%" data-live-search="true"
+                        multiple data-max-options="5"  onchange="getThemes(this)" >
+                    <option value="草原">草原</option>
+                    <option value="星空">星空</option>
+                    <option value="赏花">赏花</option>
+                    <option value="雪景">雪景</option>
+                    <option value="海岛">海岛</option>
+                    <option value="极限运动">极限运动</option>
+                    <option value="滑雪">滑雪</option>
+                    <option value="温泉">温泉</option>
+                    <option value="避暑">避暑</option>
+                    <option value="自驾">自驾</option>
+                    <option value="游轮">游轮</option>
+                    <option value="父母">父母</option>
+
+                </select>
+            </div>
+
+            <div class="form-group">
+                <input id="searchText" name="searchText" type="text" class="form-control" placeholder="">
+            </div>
+            <button id="btn-show" type="button" class="btn btn-default" onclick="showChoose()">显示</button>
+            <button id="btn-search" type="submit" class="btn btn-default">搜索</button>
+        </form>
+    </div>
+
+
+
 
 
 </body>

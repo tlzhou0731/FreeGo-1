@@ -10,6 +10,9 @@ public class ScenicPictureInfo {
     private String picturePath;     //图片路径
     private int pictureOrder;       //景点图片顺序
 
+    public ScenicPictureInfo(){}
+
+
     public ScenicPictureInfo(int scenicId, String picturePath, int pictureOrder) {
         this.scenicId = scenicId;
         this.picturePath = picturePath;
