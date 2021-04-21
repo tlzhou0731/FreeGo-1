@@ -1,4 +1,4 @@
-<%--
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   Author: Macro
   Date: 2021/4/21
@@ -99,6 +99,10 @@
 
 </script>
 
+<%
+    List<String> scenicThemeList = null;
+    scenicThemeList = (List<String>)request.getAttribute("scenicThemeList");%>
+
 <div class="btn-toolbar" role="toolbar" aria-label="...">
     <div class="btn-group" role="group" aria-label="...">
         <div class="btn-group" role="group" aria-label="...">
@@ -130,7 +134,7 @@
 </div>
 
 <div>
-    <form class="navbar-form navbar-left" action="ScenicServlet" method="post">
+    <form class="navbar-form navbar-left" action="/ScenicServlet?&methodName=findScenicInfo" method="post">
         <div>
             <div>
                 时间
@@ -180,18 +184,24 @@
             <select id="'themeChoose" name="themeChoose" class="form-control selectpicker"
                     data-width="80%" data-live-search="true"
                     multiple data-max-options="5"  onchange="getThemes(this)" >
-                <option value="草原">草原</option>
-                <option value="星空">星空</option>
-                <option value="赏花">赏花</option>
-                <option value="雪景">雪景</option>
-                <option value="海岛">海岛</option>
-                <option value="极限运动">极限运动</option>
-                <option value="滑雪">滑雪</option>
-                <option value="温泉">温泉</option>
-                <option value="避暑">避暑</option>
-                <option value="自驾">自驾</option>
-                <option value="游轮">游轮</option>
-                <option value="父母">父母</option>
+                <%if(scenicThemeList != null){
+                    for (int i = 0;i < scenicThemeList.size();i++){%>
+                    <option value=<%=scenicThemeList.get(i)%>><%=scenicThemeList.get(i)%></option>
+                <%}}else{%>
+                <option value="空">空</option>
+                <%}%>
+<%--                <option value="草原">草原</option>--%>
+<%--                <option value="星空">星空</option>--%>
+<%--                <option value="赏花">赏花</option>--%>
+<%--                <option value="雪景">雪景</option>--%>
+<%--                <option value="海岛">海岛</option>--%>
+<%--                <option value="极限运动">极限运动</option>--%>
+<%--                <option value="滑雪">滑雪</option>--%>
+<%--                <option value="温泉">温泉</option>--%>
+<%--                <option value="避暑">避暑</option>--%>
+<%--                <option value="自驾">自驾</option>--%>
+<%--                <option value="游轮">游轮</option>--%>
+<%--                <option value="父母">父母</option>--%>
 
             </select>
         </div>
@@ -203,7 +213,18 @@
         <button id="btn-search" type="submit" class="btn btn-default">搜索</button>
     </form>
 </div>
-
+<div>
+    <%if(scenicThemeList != null){
+        for (int i = 0;i < scenicThemeList.size();i++){%>
+    <tr>
+        <td><input type="checkbox"></td>
+        <td><%=scenicThemeList.get(i)%></td>
+        <br>
+    </tr>
+    <%}}else{%>
+    <h1>没值</h1>
+    <%}%>
+</div>
 
 
 
